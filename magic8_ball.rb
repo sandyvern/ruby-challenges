@@ -34,14 +34,19 @@ question = gets.chomp
 "Very doubtful"
 ]
 
+=begin
+answer = @possible_responses[rand(0..19)]
+	puts answer
+=end	
+
 random_answer = @possible_responses.sample
 puts random_answer
 
-#puts possible_responses.sample.chomp
+#puts possible_responses.sample.chomp   @possible_responses.sample
 
 
 message = @client.account.messages.create(
   :from => "+12036587425",
   :to =>"+12034346139",
-  :body => "The answer to your question '#{question}' The Magic 8 ball says '#{@possible_responses.sample}!'"
+  :body => "The answer to your question '#{question}' The Magic 8 ball says '#{random_answer}!'"
 )
