@@ -42,9 +42,6 @@ answer = @possible_responses[rand(0..19)]
 random_answer = @possible_responses.sample
 puts random_answer
 
-#puts possible_responses.sample.chomp   @possible_responses.sample
-
-
 message = @client.account.messages.create(
   :from => "+12036587425",
   :to =>"+12034346139",
