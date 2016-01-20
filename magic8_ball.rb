@@ -43,5 +43,5 @@ puts random_answer
 message = @client.account.messages.create(
   :from => "+12036587425",
   :to =>"+12034346139",
-  :body => "Your question was, #{question}. The Magic 8 ball says #{@possible_responses}!"
+  :body => "The answer to your question '#{question}' The Magic 8 ball says '#{@possible_responses.sample}!'"
 )
