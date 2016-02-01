@@ -10,11 +10,11 @@ def lookupLocation(currLoc)
     weather = client.lookup_by_location(currLoc)
 end
 
-def currentWx(location, currLoc)
-    tempInC = location.condition['temp']
+def currentWeather(location, currLoc)
+    tempInF = location.condition['temp']
     forecast = location.condition['text'].downcase
 
-    puts "It is currently #{tempInC} ˚C and #{forecast} in #{currLoc}."
+    puts "It is currently #{tempInC} ˚F and #{forecast} in #{currLoc}."
 end
 
 # get the correct forecast using the method and assign it to a variable
@@ -22,4 +22,4 @@ currLoc = getLocation
 location = lookupLocation(currLoc)
 
 # show the correct forecast to the user based on their location
-currentWx(location, currLoc)
+currentWeather(location, currLoc)
