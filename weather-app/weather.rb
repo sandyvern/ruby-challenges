@@ -14,7 +14,7 @@ def currentWeather(location, currLoc)
     tempInF = location.condition['temp']
     forecast = location.condition['text'].downcase
 
-    puts "It is currently #{tempInC} ˚F and #{forecast} in #{currLoc}."
+    puts "It is currently #{tempInF} ˚F and #{forecast} in #{currLoc}."
 end
 
 # get the correct forecast using the method and assign it to a variable
